@@ -1,0 +1,15 @@
+apply plugin: 'groovy'
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.codehaus.groovy:groovy:2.5.6'
+}
+
+// enabling indy fixes the problem
+compileGroovy {
+//     groovyOptions.optimizationOptions.indy = true
+}
